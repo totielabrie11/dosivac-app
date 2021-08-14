@@ -1,0 +1,30 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+
+    background-color: orange;
+    color: white;
+
+    h1 {
+        width: 20%;
+        font-size: 40px;
+        font-family: 'roboto', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    nav {
+        display: flex;
+        text-decoration: none;
+        margin-left: 10px;
+        width: 100% ;
+        justify-content: space-between;
+        list-style: none;
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+        }
+    }
+}
