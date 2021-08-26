@@ -1,9 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react'
 import './ItemListContainer.scss'
 
 export const ItemListContainer = ({saludo, propuesta}) => {
 
-    const [data, setData] = useState('')
+    const [data, setData] = useState([])
+    const [loading, setLoading] = useState(false)
 
     const productos = [
         {
@@ -24,27 +26,36 @@ export const ItemListContainer = ({saludo, propuesta}) => {
     ]
 
    
-    const pedirDatos = (productos) => {
-       return new Promise((resolve, reject)=>{
-              
-        if (productos) {resolve('la promesa se resuelve correctamente')
-        } else {reject("La promesa se rechaza")}
-    
-    })
-       
-} 
-    useEffect(() => {
-        pedirDatos(true)
-            .then(res => {
-                setData(res)
-            })
-            
-            .catch(err => {
-                setData(err)
-            })
-            .finally(()=>{console.log('fin del llamado')})
-    }, [])
+    const pedirDatos = () => {
+        
+        
+        return new Promise((resolve, reject)=>{
 
+            setTimeout(() => {
+                
+                resolve(productos)
+                
+            }, 3000);
+              
+    
+        })
+       
+    } 
+    
+    useEffect(() => {
+        setLoading(true)
+
+        pedirDatos()
+            .then(res => setData(res))
+            
+            .catch(err => console.log('error 404'))
+
+            .finally(()=> {
+                console.log('finalizada la carga de productos')  
+                setLoading(false)  
+            })
+
+    }, [])
 
 
 
@@ -52,7 +63,23 @@ export const ItemListContainer = ({saludo, propuesta}) => {
         <div className="cardsContainer">
             <h2>Lista de Productos</h2>
             <hr/>
-            <p>{data}</p>
+
+        
+            {
+                loading 
+                ? <h2>Cargando...</h2> 
+                : 
+                <ul>
+                    { data.map( (prod)=> (
+                    <li key={prod.id}>
+                        <h3>{prod.nombre}</h3>
+                        <p>{prod.precio}</p>
+                    </li>
+                    
+                    )) }
+                </ul>
+            }
+
         </div>
     )
 }
