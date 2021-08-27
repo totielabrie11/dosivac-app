@@ -31,6 +31,7 @@ export const ClickTraker = () => {
 
             <p>Clicks: {contador}</p>
             <p>clickedo el: {fecha}</p>
+        
             <hr/>
             
         </div>

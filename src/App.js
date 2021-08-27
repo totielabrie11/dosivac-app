@@ -16,11 +16,8 @@ function App() {
 
     <>
       <NavBar/>
-      <ItemListContainer saludo={"Hola consumidores"} propuesta={"Encontrá los mejores precios"}/>
+      <ItemListContainer saludo={"Hola consumidores"} propuesta={"Encontrá los mejores precios"} className="container"/>
 
-      
-
-      
       <button className="btn btn-dark d-flex container w-25 mb-2" onClick={()=>{setMontar(!montar)}}>montar/desmontar Contador</button>
     
       {montar && <ClickTraker/>} {/* renderizado condicional */}

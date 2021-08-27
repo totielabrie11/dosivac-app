@@ -27,12 +27,13 @@ export const ItemListContainer = ({saludo, propuesta}) => {
 
 
     return (
-        <>
-            {loading 
+        <div className="cardsContainer">
+            {
+            loading 
              ? <h2>Cargando...</h2>
              : <ItemList productos={data}/>    
             }
-        </>
+        </div>
     )
     
 }
