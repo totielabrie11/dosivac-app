@@ -4,6 +4,7 @@ import './components/ItemListContainer/ItemListContainer'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { useState } from 'react';
 import { ClickTraker } from './components/ClickTracker/ClickTracker.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
