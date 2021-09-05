@@ -10,6 +10,7 @@ console.log("🚀 ~ file: item.js ~ line 4 ~ Item ~ item", item)
             <h3>{item.nombre}</h3>
             <p>{item.desc}</p>
             <p>{item.precio}</p>
+            <button className="btn btn-success">Ver Mas</button>
         </div>
     
     )

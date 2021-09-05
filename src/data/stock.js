@@ -1,15 +1,11 @@
-import img from './../img/img'
-
-console.log(img) //profe Viky , tengo capturado el img que tiene un objeto con cada una de las rutas de mi imagen. si pruebo esto {img.img1} me da error. no termino de entender del todo como desestructurar los objetos o llegado el caso un array. También cuando hago el export de mis url de img , tengo la opción de pasar todo como array.   
-
-export const productos = (img) => [
+export const productos = () => [
     {
         id: 1,
         category: 'guitarras',
         nombre: "Ibanez Shem",
         precio: 45000,
         desc: "Guitarra tipo Super Strat, diseñada por el guitarrista Steve Vai",
-        img: {img}
+        img:  `https://images.reverb.com/image/upload/s--MB-Am8-J--/f_auto,t_supersize/v1604083644/fk8hpb8g8oxffxzi3ezl.jpg`
     },
     {
         id: 2,
@@ -17,7 +13,7 @@ export const productos = (img) => [
         nombre: "Fender Stratocaster",
         precio: 35000,
         desc: "Mas de 40 años con su sonido distinguido",
-        img: {img}
+        img: `https://d3ugyf2ht6aenh.cloudfront.net/stores/969/083/products/014-4502-513-1-b1-d933d88271a36463e816055430448957-640-0.jpg`
     },
     {
         id: 3,
@@ -25,7 +21,7 @@ export const productos = (img) => [
         nombre: "Fender",
         precio: 25000,
         desc: "calidad de construccion",
-        img: {img}
+        img: `https://www.musicnexo.com/4056-thickbox_default/bajo-fender-vintera-70s-jazz-bass.jpg`
     },
     {
         id: 4,
@@ -33,7 +29,7 @@ export const productos = (img) => [
         nombre: "Ibanez",
         precio: 3000,
         desc: "Extra potente",
-        img: {img}
+        img: `https://karmamusic.mx/13248-large_default/ibanez-bajo-electrico-negro-gsr180bk.jpg`
     },
     {
         id: 5,
@@ -41,7 +37,7 @@ export const productos = (img) => [
         nombre: "Cuerdas Ernie Ball",
         precio: 900,
         desc: "Brillo y calidad de sonido",
-        img: {img}
+        img: `https://i.ebayimg.com/thumbs/images/g/UCMAAOSw0RddEkTh/s-l300.jpg`
     },
     {
         id: 6,
@@ -49,6 +45,6 @@ export const productos = (img) => [
         nombre: "Puas Dunlop de 1.5",
         precio: 100,
         desc: "Robustes y solidez",
-        img: {img}
+        img: `https://http2.mlstatic.com/D_NQ_NP_783392-MLA42843417785_072020-O.jpg`
     }
 ]
